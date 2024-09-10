@@ -1,6 +1,6 @@
 # API Repository
 
-Este repositório contém APIs para várias funcionalidades, cada uma implementada em uma branch separada. Cada branch representa uma funcionalidade específica da API.
+Este repositório contém APIs para várias funcionalidades, cada uma implementada em uma branch separada. Cada branch representa uma funcionalidade específica da API, com respostas formatadas em JSON.
 
 ## Descrição
 
