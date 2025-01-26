@@ -1,4 +1,4 @@
-package conversorMoeda;
+package com.BuscarApi.demo.conversorMoeda;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ public class ConversorMoedaController {
     private ConversorMoeda conversorMoeda;
 
     @GetMapping("/conversor")
-    public double converterMoeda(@RequestParam String moedaOrigem, @RequestParam String moedaDestino, @RequestParam double valor) {
+    public ConversorResultado converterMoeda(@RequestParam String moedaOrigem, @RequestParam String moedaDestino, @RequestParam double valor) {
         return conversorMoeda.converterMoeda(moedaOrigem, moedaDestino, valor);
     }
 }
