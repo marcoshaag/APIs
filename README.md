@@ -1,14 +1,17 @@
-# API Repository
+# Conversor de Moedas
 
-Este repositório contém APIs para várias funcionalidades, cada uma implementada em uma branch separada. Cada branch representa uma funcionalidade específica da API, com respostas formatadas em JSON.
+Um serviço simples para converter valores entre diferentes moedas usando APIs externas, desenvolvido em **Java** com o **Spring Boot**.
 
-## Descrição
 
-O repositório é projetado para fornecer APIs para diferentes operações e serviços.
+## 🛠️ Tecnologias Utilizadas
 
-## Estrutura das Branches
+- **Java**
+- **Spring Boot**: Framework para simplificar o desenvolvimento da aplicação.
+- **RestTemplate**: Para realizar chamadas HTTP às APIs.
+- **Maven**: Gerenciador de dependências.
+- **APIs de Conversão de Moeda**: Para obter taxas de câmbio em tempo real.
 
-Cada branch no repositório contém uma implementação específica da API. Abaixo está a lista das branches e suas funcionalidades:
+## 🚀 Pré Requisitos para Rodar o Projeto
 
-- **`buscarCep`**: Implementação para buscar informações de um endereço com base em um CEP. Utiliza a API ViaCep para retornar dados de endereço.
--  **`pesquisarClima`**: Implementação para buscar informações climáticas com base no nome da cidade.
+- **Java 17** ou superior instalado.
+- **Maven** instalado para gerenciar as dependências.
