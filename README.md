@@ -1,16 +1,16 @@
 # 📍 Consulta de Endereço via CEP
 
-Este serviço permite buscar informações sobre um endereço a partir do **CEP**, utilizando a API do **ViaCEP**.
+Este serviço permite buscar informações sobre um endereço a partir do CEP, utilizando a API do ViaCEP.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Java 17**
-- **Spring Boot**
-- **RestTemplate** (para chamadas HTTP à API do ViaCEP)
-- **Maven** (gerenciamento de dependências)
-- **API externa**: [ViaCEP](https://viacep.com.br/)
+- **Java 17**: Linguagem utilizada para o desenvolvimento da aplicação.
+- **Spring Boot**: Framework para construção da API REST.
+- **RestTemplate** (se você quiser usar, mas no seu código não está sendo utilizado, seria o método de consumir a API).
+- **Maven**: Gerenciamento de dependências.
+- **API Externa**: ViaCEP para consulta de endereços.
 
 ---
 
@@ -19,34 +19,24 @@ Este serviço permite buscar informações sobre um endereço a partir do **CEP*
 ### 📌 Pré-requisitos:
 - **Java 17+** e **Maven** instalados na máquina.
 
-## 📄 Endpoint Disponível
 
-### 🔍 Buscar Endereço por CEP
-Consulta informações detalhadas sobre um **CEP**.
-
-**URL:**
-```http
-GET /cep/{cep}
-```
-
-**Exemplo de Uso:**
-```
-http://localhost:8080/cep/01001000
-```
-
-**Resposta Esperada:**
-```json
-{
-  "cep": "01001-000",
-  "logradouro": "Praça da Sé",
-  "complemento": "lado ímpar",
-  "bairro": "Sé",
-  "localidade": "São Paulo",
-  "uf": "SP"
-}
-```
+4. **Acessar o serviço**:
+    A aplicação estará disponível em [http://localhost:8080](http://localhost:8080).
 
 ---
 
-## 📌 Observações
-- Apenas CEPs válidos do Brasil podem ser consultados.
+## 📄 Endpoint Disponível
+
+### 🔍 Buscar Endereço por CEP
+
+Consulta informações detalhadas sobre um CEP.
+
+#### **URL**:
+`GET /api/cep/buscar?cep={cep}`
+
+- **Parâmetro**: `cep` (CEP a ser consultado, formato `12345-678` ou `12345678`).
+
+#### **Exemplo de Uso**:
+
+```bash
+http://localhost:8080/api/cep/buscar?cep=01001000
