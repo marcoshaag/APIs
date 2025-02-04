@@ -1,15 +1,52 @@
-# API Repository
+# 📍 Consulta de Endereço via CEP
 
-Este repositório contém APIs para várias funcionalidades, cada uma implementada em uma branch separada. Cada branch representa uma funcionalidade específica da API, com respostas formatadas em JSON.
+Este serviço permite buscar informações sobre um endereço a partir do **CEP**, utilizando a API do **ViaCEP**.
 
-## Descrição
+---
 
-O repositório é projetado para fornecer APIs para diferentes operações e serviços.
+## 🛠️ Tecnologias Utilizadas
 
-## Estrutura das Branches
+- **Java 17**
+- **Spring Boot**
+- **RestTemplate** (para chamadas HTTP à API do ViaCEP)
+- **Maven** (gerenciamento de dependências)
+- **API externa**: [ViaCEP](https://viacep.com.br/)
 
-Cada branch no repositório contém uma implementação específica da API. Abaixo está a lista das branches e suas funcionalidades:
+---
 
-- **`buscarCep`**: Implementação para buscar informações de um endereço com base em um CEP. Utiliza a API ViaCep para retornar dados de endereço.
-- **`pesquisarClima`**: Implementação para buscar informações climáticas com base no nome da cidade.
-- **`conversor-moeda`**: Implementação para converter valores entre diferentes moedas. Utiliza APIs de taxas de câmbio para realizar as conversões.
+## 🚀 Como Rodar o Projeto
+
+### 📌 Pré-requisitos:
+- **Java 17+** e **Maven** instalados na máquina.
+
+## 📄 Endpoint Disponível
+
+### 🔍 Buscar Endereço por CEP
+Consulta informações detalhadas sobre um **CEP**.
+
+**URL:**
+```http
+GET /cep/{cep}
+```
+
+**Exemplo de Uso:**
+```
+http://localhost:8080/cep/01001000
+```
+
+**Resposta Esperada:**
+```json
+{
+  "cep": "01001-000",
+  "logradouro": "Praça da Sé",
+  "complemento": "lado ímpar",
+  "bairro": "Sé",
+  "localidade": "São Paulo",
+  "uf": "SP"
+}
+```
+
+---
+
+## 📌 Observações
+- Apenas CEPs válidos do Brasil podem ser consultados.
