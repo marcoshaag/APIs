@@ -62,10 +62,10 @@ Este serviço permite buscar informações sobre um endereço a partir do CEP, u
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Java 17**: Linguagem utilizada para o desenvolvimento da aplicação.
-- **Spring Boot**: Framework para construção da API REST.
-- **RestTemplate** (se você quiser usar, mas no seu código não está sendo utilizado, seria o método de consumir a API).
-- **Maven**: Gerenciamento de dependências.
+- **Java**
+- **Spring Boot**: Framework para simplificar o desenvolvimento da aplicação.
+- **RestTemplate**: Para realizar chamadas HTTP às APIs.
+- **Maven**: Gerenciador de dependências.
 - **API Externa**: ViaCEP para consulta de endereços.
 
 ---
