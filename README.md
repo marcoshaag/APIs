@@ -56,9 +56,9 @@ Consulta informações detalhadas sobre um CEP.
 
 ```bash
 http://localhost:8080/api/cep/buscar?cep=01001000
+ ```
 
-
-
+---
 
 # Conversor de Moedas
 
