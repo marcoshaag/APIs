@@ -11,8 +11,8 @@ O repositório é projetado para fornecer APIs para diferentes operações e ser
 Cada branch no repositório contém uma implementação específica da API. Abaixo está a lista das branches e suas funcionalidades:
 
 - **`buscarCep`**: Implementação para buscar informações de um endereço com base em um CEP. Utiliza a API ViaCep para retornar dados de endereço.
-- **`pesquisarClima`**: Implementação para buscar informações climáticas com base no nome da cidade.
 - **`conversor-moeda`**: Implementação para converter valores entre diferentes moedas. Utiliza APIs de taxas de câmbio para realizar as conversões.
+- **`pesquisarClima`**: Implementação para buscar informações climáticas com base no nome da cidade.
 
 # 📍 Consulta de Endereço via CEP
 
@@ -98,4 +98,42 @@ A resposta da conversão pode ser, por exemplo:
   "valorConvertido": 92.34
 }
 
-``` 
+```
+
+
+# Pesquisar Clima
+
+Um serviço simples para pesquisar o clima de qualquer lugar do mundo, utilizando APIs externas, desenvolvido em **Java** com o **Spring Boot**.
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Java**
+- **Spring Boot**: Framework para simplificar o desenvolvimento da aplicação.
+- **RestTemplate**: Para realizar chamadas HTTP às APIs.
+- **Maven**: Gerenciador de dependências.
+- **API Externa (ex.: OpenWeatherMap)**: Para obter informações climáticas em tempo real.
+
+## 🚀 Pré Requisitos para Rodar o Projeto
+
+- **Java 17** ou superior instalado.
+- **Maven** instalado para gerenciar as dependências.
+
+## 📄 Endpoint Disponível
+
+### 🌤️ Consultar Clima por Cidade
+
+Consulta informações climáticas de uma cidade com base no nome.
+
+#### **URL**:
+`GET /api/clima/pesquisar?cidade={nomeCidade}`
+
+- **Parâmetro**: `cidade` (Nome da cidade a ser consultada, por exemplo, "Florianópolis" ou "Berlim").
+
+#### **Exemplo de Uso**:
+
+```bash
+http://localhost:8080/api/clima/pesquisar?cidade=São Paulo
+
+```
+
+
